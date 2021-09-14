@@ -256,7 +256,7 @@ SetFlags() {
     # for allowing remote lookup
 
   # enable testing
-  [ "$CHECKPORT" ] && SSHFLAGS="$SSHFLAGS -L ${CHECKPORT}:${REMOTEIP}:${REMOTEPORT}"
+  #[ "$CHECKPORT" ] && SSHFLAGS="$SSHFLAGS -L ${CHECKPORT}:${REMOTEIP}:${REMOTEPORT}"
 
 
   # check for dropbear
@@ -272,7 +272,7 @@ SetFlags() {
     # TODO use builtin keepalive on real OpenSSH client? (-o ServerAliveInterval=5)
     # or -o StrictHostKeyChecking=off
     #TESTCONNECTION=false
-    SSHFLAGS="$SSHFLAGS -n -i $IDENTITYFILE -F $CONFIGFILE"
+    SSHFLAGS="$SSHFLAGS -n -i $IDENTITYFILE"
   fi
 
   # check what kind of OS is running to determine the flags for the "ps" command
