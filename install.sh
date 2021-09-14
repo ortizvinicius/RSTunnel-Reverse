@@ -194,7 +194,7 @@ echo "Configure for reverse tunneling? [y/n]";
 echo -n "Type here> "
 
 read input
-[ "$input" == 'y' ] && _config_revtun
+_config_revtun
 
 # -------------- NOTIFICATION OPTIONS ----------------- #
 
